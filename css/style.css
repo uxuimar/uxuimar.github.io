@@ -9,6 +9,7 @@
       /* Internet Explorer */ @-ms-keyframes fadein { from { opacity: 0; } to { opacity: 1; } } 
       /* Opera < 12.1 */ @-o-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 @font-face {
     font-family: 'Glyphicons Halflings';
@@ -678,6 +679,45 @@
   .icon-mail {
       display: inline-flex;
   }
+
+ .nav-link[class*="active"] {
+  border: 1px solid #000!important;
+  background-color: rgb(248,249,250)!important;
+  color: #000!important;
+  border-radius: 3px;
+ }
+
+ .nav-link[class*="active"]:hover {
+   outline: none;
+   background-color: #212529!important;
+   color: #fff!important;
+  box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.3);
+   transition: all .5s ease-in-out;
+   
+ }
+
+
+
+  button[aria-selected*="false"] {
+   color: #000!important;
+   transition: all .5s ease-in-out;
+ }
+
+   button[aria-selected*="false"]:hover {
+   color: #0BCAAE!important;
+   transition: all .5s ease-in-out;
+ }
+
+ .badge {
+  position: relative;
+  top: -2px;
+  left: 7px;
+ }
+
+
+
+
+
 
   .icon-mail:hover >.text-mail {
     display: inline-block;
@@ -2162,7 +2202,7 @@ left: 509px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform .6s ease-in-out;
-    height: 27em;
+    height: 29em;
 }
 
   .title { display: block; font-size: 14px; margin-left: 0px; } 
