@@ -820,7 +820,7 @@ background: radial-gradient(circle, rgba(255,255,255,1) 67%, rgba(238,238,238,1)
       position: absolute;
       transition: width 2s;
       top: 111px;
-      border-radius: 25%;
+      border-radius: 30% 80% 30% 80%;
       right: 387px;
       background-color: #eee;
       
