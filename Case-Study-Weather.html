@@ -1,261 +1,188 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App project · Maryoris Martinez</title>
+  <meta name="description" content="Application built with React.js that allows users to check the current weather and forecast in any city worldwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/case-study.css">
+  <script src="https://kit.fontawesome.com/9ac0252936.js" crossorigin="anonymous"></script>
+</head>
+<body id="body" class="case-page" style="--project-accent: #91eadc;">
+<header id="top">
+  <nav class="navbar navbar-expand-md fixed-top portfolio-navbar">
+    <div class="container">
+      <a class="brand-lockup" href="index.html#top" aria-label="Go to portfolio home">
+        <span class="brand-name">Maryoris Sofia Martinez</span>
+        <span class="brand-role">UX/UI Designer</span>
+      </a>
 
-    <title>Weather project</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/9ac0252936.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-     </head>
-    <style>
-    </style>
-  </head>
-  <body id="body">
-    <header id="top">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #fff;">
-            <div class="container bar-header">
-                <span class="fs-5 fw-bold">MARYORIS SOFIA MARTINEZ<span class="fs-6 fw-light title">UX/UI Designer</span></span>
-                
-              <a class="navbar-toggler collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </a>
-              <div class="navbar-collapse collapse menu-potion" id="navbarCollapse">
-                <ul class="navbar-nav text-dark ms-md-auto d-flex align-items-end flex-row mt-1 " >
-                  <li class="nav-item">
-                   <a href="#top" class="nav-link px-2 text-dark"></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#works" class="nav-link px-2 text-dark"></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#about" class="nav-link px-2 text-dark"></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#contact" class="nav-link px-2 text-dark">CONTACT</a>
-                  </li>
-                 
-                </ul>
-                
-              </div>
-            </div>
-        </nav>
-      </header>
-      <!--NAVBAR-->
-      
-      <div class="container">
-      <div class="col-sm-12 px-4 pt-5 header mt-4 mb-5">
-        <div class="row flex-lg-row align-items-start  justify-content-sm-center mt-5 mb-3 container">
-          
-          
-           <!--ilustracion-->
-          <div class=" col-md-6 col-sm-12 ">
-            <span class="container col-sm-12 px-1 pb-4 d-flex d-block justify-content-start" style="background-color: #fff;">
-              <a href="index.html?returnTab=%23dev-projects#works"  class="nav-link px-2 link-dark text-left" style="transform:rotate(90deg);"><img src="img/down-arrow-svgrepo-com.svg" height="80" ></a>
-            </span>
-            <div class="d-sm-inline-flex mx-lg-auto img-fluid shape_into_3" alt="Bootstrap Themes" loading="lazy">
-              <img src="img/screen-2-02_dev.png" class="d-block">
-            </div> 
-         </div>
-         <div class="col-sm-12 col-md-6 box-text">
+      <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <p class="lead fs-5 text-muted">Web App | <span class="text-info">2025</span></p></p>
-          
-          <h1 class="display-5 fw-light lh-1 mb-3 d-flex flex-row">Weather App
-            </h1>
-          <p class="lead fs-5 text-secondary">Summary</p></p>
-          <p class=" fs-5 fw-light">
-            <div class="lead">Application built with React.js that allows users to check the current weather and forecast in any city worldwide.
-            </div>
-            
-            <div class="lead pt-2">
-            This application uses the OpenWeatherMap API to retrieve real-time weather information.
-            </div>
+      <div class="navbar-collapse collapse" id="navbarCollapse">
+        <ul class="navbar-nav portfolio-menu ms-md-auto align-items-md-center mt-3 mt-md-0">
+          <li class="nav-item"><a href="index.html#top" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="index.html#works" class="nav-link">Works</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="case-hero" style="--project-accent: #74d8ff;">
+  <div class="case-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <a class="case-back-link" href="index.html#works" aria-label="Back to works">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      Back to works
+    </a>
 
-            <div class="lead pt-5 text-secondary">
-            Technologies:<p class="fw-bold text-dark pt-3"> React.js, HTML, CSS, API REST.</p>
-            </div>
-               <div class="lead pt-2 col-md-6 d-flex flex-row gap-2">
-                  <a type="button" href="https://my-aplicacion-clima-react.netlify.app/" target="_blank" class="btn btn-outline-dark">View demo</a> 
-                  <a type="button" href="https://github.com/uxuimar/aplicacion-clima-react.git" target="_blank" class="btn btn-outline-dark">Code <i class="bi bi-github"></i></a> 
-            </div>
-          </p>
-          
-          <div class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy"></div>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+    <div class="case-hero-grid">
+      <div class="case-visual" data-reveal>
+        <div class="case-device-card">
+          <img src="img/screen-2-02_dev.png" alt="Weather App project preview" loading="eager">
         </div>
-             
-       </div>
-          <!--ilustracion-->
+        <span class="case-floating-label label-one">Web App</span>
+        <span class="case-badge">Project</span>
+      </div>
+
+      <div class="case-copy" data-reveal>
+        <p class="section-kicker">Web App · 2025</p>
+        <h1>Weather App</h1>
+        <div class="case-summary">
+          <p>Application built with React.js that allows users to check the current weather and forecast in any city worldwide.</p><p>This application uses the OpenWeatherMap API to retrieve real-time weather information.</p>
         </div>
-       
-      </div>   
-<!----heading-->
-<!--Porque es necesario-->
-<div class="container-fluid col-sm-12 white mt-5" id="start">   
-
-  <div class="container my-4">
-    <div class="row">
-      <div class="col-sm-12 my-2 my-2" >  
-      <div class="white text-secondary px-4 text-left my-4">      
-
-            <div class="row featurette">
-              <div class="col-md-12 d-flex justify-content-start align-items-start">
-              </div>
-                  <div class="col-md-6">                    
-                </div>
-                <div class="col-md-6 d-flex justify-content-start align-items-center">
-              </div>
-
-            </div>
+        <div class="case-actions"><a class="case-action case-action-primary" href="https://my-aplicacion-clima-react.netlify.app/" target="_blank" rel="noopener">View demo <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a><a class="case-action case-action-primary" href="https://github.com/uxuimar/aplicacion-clima-react.git" target="_blank" rel="noopener">Code <i class="bi bi-github" aria-hidden="true"></i></a></div>
       </div>
     </div>
   </div>
-  </div>
+</section>
+<section class="case-scroll-anchor" aria-label="Continue to case study">
+  <a href="#start" class="scroll-cue">
+    <i class="bi bi-arrow-down" aria-hidden="true"></i>
+  </a>
+</section>
+<section class="case-study-content">
+<div class="container-fluid col-sm-12 white mt-5" id="start">
+<div class="container my-4">
+<div class="row">
+<div class="col-sm-12 my-2 my-2">
+<div class="white text-secondary px-4 text-left my-4">
+<div class="row featurette">
+<div class="col-md-12 d-flex justify-content-start align-items-start">
 </div>
-<!--Que esta pasando-->
-      <div class="container-fluid col-sm-12 bg-light">     
-        <div class="container bg-light my-5 py-5">
-          <div class="row">
-            <div class="col-sm-12 my-5" >  
-            <div class="bg-light text-secondary px-4 text-start">      
-                  <div class="row featurette">
-                    <div class="col-md-7">
-                      <h2 class="featurette-heading text-dark mb-4">Main Features</h2>
-                      <div class="lead">Simplify quick access to weather information with a simple and intuitive interface: 
+<div class="col-md-6">
+</div>
+<div class="col-md-6 d-flex justify-content-start align-items-center">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid col-sm-12 bg-light">
+<div class="container bg-light my-5 py-5">
+<div class="row">
+<div class="col-sm-12 my-5">
+<div class="bg-light text-secondary px-4 text-start">
+<div class="row featurette">
+<div class="col-md-7">
+<h2 class="featurette-heading text-dark mb-4">Main Features</h2>
+<div class="lead">Simplify quick access to weather information with a simple and intuitive interface: 
                             <ul class="list-group list-group-flush mt-4">
-      
-                              <li class="list-group-item lead fs-6 bg-light mx-5 ">Search by city.</li>
-      
-                              <li class="list-group-item lead fs-6 bg-light mx-5">Current weather.</li>
-      
-                            </ul>                    
-                          </div>
-                    </div>
-                    <div class="col-md-5">
-                      
-                        <div class="figura_page"><img src="img/wireframe-svgrepo-com.svg"></div>
-                        <div class="figura-2_page"></div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-           </div>
-          </div>
-      </div>
-       <!--Como se puede lograr-->
-  <div class="container-fluid col-sm-12 white">     
-    <div class="container white mt-5">
-      <div class="row">
-        <div class="col-sm-12 my-5" id="">  
-        <div class="white text-secondary px-4 text-start">      
-              <div class="row featurette">
-               
-                <div class="col-md-5">
-                  <div class="figura_page"><img src="img/idea-svgrepo-com.svg"></div>
-                  <div class="figura-2_page"></div>
-
-                </div>
-                 <div class="col-md-7">
-                  <h2 class="featurette-heading text-dark mb-4">Learning</h2>
-                  <div class="lead"> To achieve this, I focused on the following key aspects:
+<li class="list-group-item lead fs-6 bg-light mx-5">Search by city.</li>
+<li class="list-group-item lead fs-6 bg-light mx-5">Current weather.</li>
+</ul>
+</div>
+</div>
+<div class="col-md-5">
+<div class="figura_page"><img src="img/wireframe-svgrepo-com.svg"/></div>
+<div class="figura-2_page"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid col-sm-12 white">
+<div class="container white mt-5">
+<div class="row">
+<div class="col-sm-12 my-5" id="">
+<div class="white text-secondary px-4 text-start">
+<div class="row featurette">
+<div class="col-md-5">
+<div class="figura_page"><img src="img/idea-svgrepo-com.svg"/></div>
+<div class="figura-2_page"></div>
+</div>
+<div class="col-md-7">
+<h2 class="featurette-heading text-dark mb-4">Learning</h2>
+<div class="lead"> To achieve this, I focused on the following key aspects:
                         <ul class="list-group list-group-flush mt-4">
+<li class="list-group-item lead fs-6 mx-5 white">Improving state management proficiency.</li>
+<li class="list-group-item lead fs-6 mx-5 white">React Hooks.</li>
 
-                          <li class="list-group-item lead fs-6 mx-5 white">Improving state management proficiency.</li>
-
-                          <li class="list-group-item lead fs-6 mx-5 white">React Hooks.</li>
-                          <li class="list-group-item lead fs-6 mx-5 white"> </li>
-
-                        </ul>        
-                      </div>
-                </div>
-              </div>
-          </div>
-        </div>
-       </div>
-      </div>
-  </div>
-
-   <!--Thanks-->
-    <div class="container-fluid col-sm-12 white">    
-    <div class="container  mt-5">
-      <div class="row">
-        <div class="col-sm-12 my-5" >  
-        <div class=" text-secondary px-4 text-center">      
-
-          <div class="row featurette">
-            
-              <div class="col-md-12">
-                <h1 class="featurette-heading text-dark mb-4">¡Thanks for watching!</h1>             
-              </div>
-            </div> 
-                  
-          </div>
-        </div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid col-sm-12 white">
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-12 my-5">
+<div class="text-secondary px-4 text-center">
+<div class="row featurette">
+<div class="col-md-12">
+<h1 class="featurette-heading text-dark mb-4">¡Thanks for watching!</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer case-footer" id="contact">
+  <div class="container">
+    <p class="section-kicker">Contact</p>
+    <div class="footer-grid">
+      <h2>Let’s build thoughtful<br>digital experiences.</h2>
+      <div class="footer-actions" aria-label="Social contact links">
+        <a href="https://www.linkedin.com/in/maryoris-martinez-9b9186134" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.behance.net/MaryorisMartinez" target="_blank" rel="noopener" aria-label="Behance">
+          <i class="fab fa-behance" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:maryorism6@gmail.com" aria-label="Email Maryoris">
+          <i class="far fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="#top" aria-label="Back to top">
+          <i class="bi bi-arrow-up" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </div>
-</div>
-   <!----Footer-->
-     <div class="col-sm-12 white">
-      <div class="container " id="contact">
-        <div class="row">
-          <div class="container">
-        <footer class="d-flex flex-sm-column flex-md-row flex-wrap justify-content-between align-items-center py-3 combo-footer">
-          
-          <div class=" col-md-9 d-flex align-items-center  justify-content-lg-start text-dark combo-icons">
-            <div class="lead fs-5 text-dark text-contact">Contact </div>
-      
-              <div class=" icon-bar">
-               
-                <a type="button" href="https://www.linkedin.com/in/maryoris-martinez-9b9186134"class="btn text-dark" aria-disabled="true">
-                     
-                  <i class="fab fa-linkedin"></i>
-                </a>
-
-                <a type="button" href="https://www.behance.net/MaryorisMartinez" class="btn text-dark" aria-disabled="true">
-               
-                  <i class="fab fa-behance"></i>
-                </a>
-
-
-                        <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          <i class="far fa-envelope text-dark"></i>
-                        </a>
-                
-              </div>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body card-icons-footer">
-                 maryorism6@gmail.com
-              </div>
-            </div>
-
-            </div>
-            <div class=" col-sm-3">
-                <a href="#top" class="nav-link px-2 py-3 link-dark text-end arrow-bottom">
-                  <img src="img/up-arrow-svgrepo-com.svg" height="80" ></a>
-            </div>
-        </footer>
-          </div>
-        </div>
-        </div>
-
-      </div>
-    <!---Footer end-->
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
-   
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/case-study.js"></script>
+</body>
 </html>

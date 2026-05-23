@@ -1,570 +1,289 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <meta name="description" content="Portfolio of Maryoris Sofia Martinez, UX/UI Designer focused on digital products, usability, research and front-end development.">
     <title>Maryoris Martinez - UX/UI Designer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.png">
     <script src="https://kit.fontawesome.com/9ac0252936.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-      <script type="module">
-      import * as bootstrap from 'bootstrap'
-
-      new bootstrap.Popover(document.getElementById('popoverButton'))
-    </script>
-      
-     </head>
-    <style>
-
-    </style>
   </head>
-  <body id="body">
-    <header id="top">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #fff;">
-            <div class="container bar-header">
-                <span class="fs-5 fw-bold">MARYORIS SOFIA MARTINEZ<span class="fs-6 fw-light title">UX/UI Designer</span></span>
-                
-              <a class="navbar-toggler collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </a>
-              <div class="navbar-collapse collapse menu-potion" id="navbarCollapse">
-                <ul class="navbar-nav text-dark ms-md-auto d-flex align-items-end flex-row mt-1 " >
-                  <li class="nav-item">
-                   <a href="#top" class="nav-link px-2 text-dark">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#works" class="nav-link px-2 text-dark">WORKS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#about" class="nav-link px-2 text-dark">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#contact" class="nav-link px-2 text-dark">CONTACT</a>
-                  </li>
-                 
-                </ul>
-                
+
+  <body id="top">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md fixed-top portfolio-navbar" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand brand-lockup" href="#top" aria-label="Maryoris Martinez home">
+            <span class="brand-name">Maryoris Sofia Martinez</span>
+            <span class="brand-role">UX/UI Designer</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto align-items-md-center portfolio-menu">
+              <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section section-reveal" aria-labelledby="hero-title">
+        <div class="hero-orb hero-orb-primary" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-secondary" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="section-kicker">UX/UI Designer · Product Design · Front-end mindset</p>
+            <h1 id="hero-title" class="hero-title">
+              Designing digital products with <span>clarity, motion and usability.</span>
+            </h1>
+            <p class="hero-description">
+              I create user-centered interfaces by combining research, visual design, interaction patterns and a practical understanding of development.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="btn btn-primary portfolio-btn" href="#works">View projects</a>
+              <a class="btn btn-outline-dark portfolio-btn" href="#contact">Contact me</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="ui-card ui-card-main">
+              <div class="ui-card-header">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="ui-card-content">
+                <div class="ui-pill"></div>
+                <div class="ui-line wide"></div>
+                <div class="ui-line"></div>
+                <div class="ui-grid">
+                  <span></span><span></span><span></span><span></span>
+                </div>
               </div>
             </div>
-        </nav>
-      </header>
-      <!--NAVBAR-->
-      
-      <div class="triangulo"></div>
-      <div class="col-sm-12 px-4 py-5 header">
-        <div class="row flex-lg-row align-items-center g-5 justify-content-sm-center">
-          
-          <div class="col-sm-4 col-xs-12 box-text">
-            <h1 class="display-5 fw-bold lh-1 mb-3 mt-5">Hi There!</h1>
-            <p class="lead fs-1">I'm a Graphic Designer specialized in UX/UI Design  & Development.</p>
-            
-            
-            <div class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy"></div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
+            <div class="floating-chip chip-research"><i class="bi bi-search-heart"></i> User Experience</div>
+             <div class="floating-chip chip-interface"><i class="bi bi-brush"></i> User Interface</div>
+            <div class="floating-chip chip-motion"><i class="bi bi-code"></i> Development</div>
           </div>
-           <!--ilustracion-->
-
-          <div class="col-sm-6 col-sx-12">
-            
-            <div class="d-block mx-lg-auto img-fluid circulo circle" alt="Bootstrap Themes" loading="lazy">
-              
-            </div> 
-            
-            <div class=" mx-lg-auto img-fluid formback" alt="Bootstrap Themes" loading="lazy">
-              
-              
- 
-            </div>
-            
-           
-            
-            <div class="d-block mx-lg-auto img-fluid circulo circle " alt="Bootstrap Themes" loading="lazy">
-                
-              
-                <div class="rectangulo"></div>
-                <div class="rectangulo-1"></div>
-                <div class="rectangulo-2"></div>
-                <div class="rectangulo-3"></div>
-                
-              
-            </div>    
-         </div>
-             
-       </div>
-          <!--ilustracion-->
         </div>
-      </div>
-      <div class="container col-sm-12 px-1 pb-4 d-flex justify-content-lg-end align-items-center justify-content-center" style="background-color: #fff;">
-         
-        <a href="#about" class="nav-link px-2 pb-3 link-dark text-end arrow-bottom"><img src="img/down-arrow-svgrepo-com.svg" height="80" ></a>
-        </div>
-      <!----heading-->
-      <!--Renglon de muestra 1-->
-      <div class="col-sm-12">
-        
-            <!--Carrousel-->
-          <div class="container-fluid bg-light mt-5" id="works">
-            <div class="row">
-              <div class="col-sm-12 my-5" >  
-              <div class="bg-light text-secondary px-4 text-start">      
-                  <div class="row">
-                     <div class="col-md-12 col-sm-12 mb-3" id="development">
-                       <h2 class="display-5 lh-1 mb-1 mt-0 text-dark text-center">Works</h2>
-                      
-                     </div>
-                      <p class="lead fs-5 text-dark col-md-3  text-center "></p>
-                      <p class="lead fs-5 text-dark col-md-6 text-center ">Digital products focused on User Experience Design, where the priority has been research, usability, accessibility and I have been acquiring knowledge in digital product projects from a more functional perspective, linked to Development. A complete vision of the E2E journey in B2B and B2C projects, understanding both the strategic and design layer as well as the technical execution.</p>
-                      <p class="lead fs-5 text-dark col-md-3  text-center "></p> 
-                    </div>
 
-                    <div class="col-md-12 col-sm-12 mb-3 d-flex justify-content-center pt-3" >
-                       <ul class="nav nav-pills" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">UX/UI projects</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Development projects</button>
-                        </li>
-                      </ul>
-                    </div>
+        <a href="#works" class="scroll-cue" aria-label="Go to works section">
+          <i class="bi bi-arrow-down"></i>
+        </a>
+      </section>
 
-                        
-                <!--Tabs-->
-                <div class="tab-content" id="myTabContent">
-                 
-                  <!--UxWorks-->
-                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                     
-                    <div class="col-md-12 col-sm-12 py-5 my-5">
+      <section class="works-section section-reveal" id="works" aria-labelledby="works-title">
+        <div class="container">
+          <div class="section-heading text-center">
+            <p class="section-kicker">Selected work</p>
+            <h2 id="works-title">Works</h2>
+            <p>
+              Digital products focused on user experience, usability, accessibility, research and functional execution across UX/UI and development projects.
+            </p>
+          </div>
 
-                      <div id="carouselExampleIndicatorsUx" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                   
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                         
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                           
-                              <div class="box-text-images">
-                                  <h2 class="display-5 text-dark">Cremolatti</h2>
-                                  <p class="lead fs-3">App mobile to buy products.</p>
-                                  <p class="lead fs-5 text-info">2021</p>
-                                  <p class="lead fs-5 text-secondary"></p>
-                                  <a type="button" href="Case-Study-Cremolatti.html" class="btn btn-outline-dark">View project</a>
-                              </div>
-                              
-                              <div class="shape">
-                                <img src="img/cellphone-5473878_960_720.png" class="first-slide d-block "   alt="First-slide">    
-                              </div>
-                         
+          <div class="project-filter" role="tablist" aria-label="Project category filter">
+            <button class="filter-btn active" type="button" data-project-filter="ux" role="tab" aria-selected="true">UX/UI projects</button>
+            <button class="filter-btn" type="button" data-project-filter="dev" role="tab" aria-selected="false">Development projects</button>
+          </div>
 
-                          </div>
-                          <div class="carousel-item">
-                              <div class="box-text-images-2">
-                                  <h2 class="display-5 text-dark">Confidential</h2>
-                                  <p class="lead fs-3">Web app status for services</p>
-                                  <p class="lead fs-5 text-info">2020</p>
-                                  <a type="button"  href="Case-Study-Confidential.html" class="btn btn-outline-dark" >View project</a>
-                              </div>
-                              
-                              <div class="shape_2">
-                                <img src="img/screen-2-5473878_.png" class="second-slide d-block"  alt="Second-slide">    
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="box-text-images-3">
-                              <h2 class="display-5 text-dark">K&K Insurance</h2>
-                              <p class="lead fs-3">App mobile to services</p>
-                              <p class="lead fs-5 text-info">2021</p>
-                              <a type="button" href="Case-Study-K&KInsurance.html" class="btn btn-outline-dark">View project</a>
-                            </div>
-                          
-                            <div class="shape_3">
-                              <img src="img/cellphone-2-5473878_960_720.png" class="third-slide d-block "  alt="Third-slide">    
-                            </div>
-                          </div>
-                      
-                        
-                          <div class="carousel-item">
-                            <div class="box-text-images-4">
-                                <h2 class="display-5 text-dark">All Community</h2>
-                                <p class="lead fs-3">Web app</p>
-                                <p class="lead fs-5 text-info">2021</p>
-                                <a type="button" href="Case-Study-AllCommunity.html" class="btn btn-outline-dark">View project</a>
-                            </div>
-                            <div class="shape_4">
-                              <img src="img/cellphone-3-5473878_960_720.png" class="Fourth-slide d-block "  alt="Fourth-slide">    
-                            </div>
-                        </div>
+          <div class="project-carousel" data-carousel>
+            <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous project">
+              <i class="bi bi-arrow-left"></i>
+            </button>
 
-                        <div class="carousel-item">
-                          <div class="box-text-images-6">
-                              <h2 class="display-5 text-dark">Bombón Gelato</h2>
-                              <p class="lead fs-3">Packaging prototype</p>
-                              <p class="lead fs-5 text-info">2014</p>
-                              <a type="button" href="Case-Study-BombonGelato.html" class="btn btn-outline-dark">View project</a>
-                          </div>
-                          <div class="shape_5">
-                            <img src="img/packaging-721.png" class="Fifth-slide d-block "  alt="Fifth-slide">    
-                          </div>
-                      </div>
-
-                          
-                      <div class="carousel-item">
-                        <div class="box-text-images-5">
-                          <h2 class="display-5 text-dark">Timerfood</h2>
-                          <p class="lead fs-3">App mobile planning food</p>
-                          <p class="lead fs-5 text-info">2023</p>
-                          <a type="button" href="Case-Study-Timerfood.html"class="btn btn-outline-dark">View project</a>
-                        </div>
-                      
-                        <div class="shape_6">
-                          <img src="img/img-7-timerfood.png" class="Sixth-slide d-block "  alt="Sixth-slide">    
-                        </div>
-                      </div>
-                        
-                        </div>
-                        <button class="carousel-control-prev" type="button" href="#carouselExampleIndicatorsUx" data-bs-target="#carouselExampleIndicatorsUx"  data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" href="#carouselExampleIndicatorsUx" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
+            <div class="project-viewport" aria-live="polite">
+              <div class="project-track" data-carousel-track>
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-pink">
+                    <img src="img/cellphone-5473878_960_720.png" alt="Cremolatti mobile app preview">
                   </div>
-                  <!--UxEnding-->
-                  <!--Development-->
-                   <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                      <div class="col-md-12 col-sm-12 py-5 my-5">
-
-                        <div id="carouselExampleIndicatorsDev" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                    
-                          <div class="carousel-indicators">
-
-                              <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicatorsUx" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                             
-                           
-                          
-                          </div>
-                          <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            
-                                <div class="box-text-images-4">
-                                    <h2 class="display-5 text-dark">Web Design</h2>
-                                    <p class="lead fs-3">Layout with HTML & CSS.</p>
-                                    <p class="lead fs-3 text-info">2024</p>
-      
-                                    <a type="button" href="Case-Study-Web-Design.html" class="btn btn-outline-dark">View project<span class="badge text-bg-dark">New</span></a>
-                                </div>
-                                
-                                <div class="shape_4">
-                                  <img src="img/screen-2-01_dev.png" class="first-slide d-block "   alt="first-slide">    
-                                </div>
-                          
-
-                            </div>
-                            <div class="carousel-item">
-                                <div class="box-text-images-2">
-                                    <h2 class="display-5 text-dark">Weather App</h2>
-                                    <p class="lead fs-3">Web app made with React.js </p>
-                                    <p class="lead fs-5 text-info">2025</p>
-                                    <a type="button"  href="Case-Study-Weather.html" class="btn btn-outline-dark" >View project<span class="badge text-bg-dark">New</span></a>
-                                </div>
-                                
-                                <div class="shape_2">
-                                  <img src="img/screen-2-02_dev.png" class="second-slide d-block"  alt="second-slide">    
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="box-text-images-4">
-                                <h2 class="display-5 text-dark">Movie App</h2>
-                                <p class="lead fs-3">Web search app with React.js </p>
-                                <p class="lead fs-5 text-info">2024</p>
-                                <a type="button" href="Case-App-Movies.html" class="btn btn-outline-dark">View project<span class="badge text-bg-dark">New</span></a>
-                              </div>
-                            
-                              <div class="shape_4">
-                                <img src="img/screen-2-03_dev.png" class="third-slide d-block "  alt="third-slide">    
-                              </div>
-                            </div>
-                        
-                          
-                            <div class="carousel-item">
-                              <div class="box-text-images-4">
-                                  <h2 class="display-5 text-dark">Shopping Cart</h2>
-                                  <p class="lead fs-3">For online store in React.js</p>
-                                  <p class="lead fs-5 text-info">2024</p>
-                                  <a type="button" href="Case-Study-Shopping-Cart.html" class="btn btn-outline-dark">View project<span class="badge text-bg-dark">New</span></a>
-                              </div>
-                              <div class="shape_4">
-                                <img src="img/screen-2-04_dev.png" class="Fourth-slide d-block "  alt="Fourth-slide">    
-                              </div>
-                          </div>
-
-                          <div class="carousel-item">
-                            <div class="box-text-images-6">
-                                <h2 class="display-5 text-dark">Form Validation</h2>
-                                <p class="lead fs-3">Using Vanilla JavaScript.</p>
-                                <p class="lead fs-5 text-info">2025</p>
-                                <a type="button" href="Case-Form-Validation.html" class="btn btn-outline-dark">View project<span class="badge text-bg-dark">New</span></a>
-                            </div>
-                            <div class="shape_2">
-                              <img src="img/screen-2-05_dev.png" class="Fifth-slide d-block "  alt="Fifth-slide">    
-                            </div>
-                        </div>
-                          
-                          </div>
-                          <button class="carousel-control-prev" type="button" href="#carouselExampleIndicatorsDev" data-bs-target="#carouselExampleIndicatorsDev"  data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
-                          <button class="carousel-control-next" type="button" href="#carouselExampleIndicatorsDev" data-bs-target="#carouselExampleIndicatorsDev" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                      <!--DevelopmentEnding-->
-                   </div>
-                    <!--TabEnding-->
-                
-
-                    
+                  <div class="project-content">
+                    <span class="project-type">UX/UI · 2021</span>
+                    <h3>Cremolatti</h3>
+                    <p>Mobile app to buy products.</p>
+                    <a class="project-link" href="Case-Study-Cremolatti.html">View project <i class="bi bi-arrow-up-right"></i></a>
                   </div>
-            
-              </div>
+                </article>
 
-          </div>
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-green">
+                    <img src="img/screen-2-5473878_.png" alt="Confidential web app preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">UX/UI · 2020</span>
+                    <h3>Confidential</h3>
+                    <p>Web app status for services.</p>
+                    <a class="project-link" href="Case-Study-Confidential.html">View project <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-blue">
+                    <img src="img/cellphone-2-5473878_960_720.png" alt="K&K Insurance mobile app preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">UX/UI · 2021</span>
+                    <h3>K&amp;K Insurance</h3>
+                    <p>Mobile app to services.</p>
+                    <a class="project-link" href="Case-Study-K&KInsurance.html">View project <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-violet">
+                    <img src="img/cellphone-3-5473878_960_720.png" alt="All Community web app preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">UX/UI · 2021</span>
+                    <h3>All Community</h3>
+                    <p>Web app.</p>
+                    <a class="project-link" href="Case-Study-AllCommunity.html">View project <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-yellow">
+                    <img src="img/packaging-721.png" alt="Bombón Gelato packaging preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Branding · 2014</span>
+                    <h3>Bombón Gelato</h3>
+                    <p>Packaging prototype.</p>
+                    <a class="project-link" href="Case-Study-BombonGelato.html">View project <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="ux">
+                  <div class="project-media gradient-warm">
+                    <img src="img/img-7-timerfood.png" alt="Timerfood mobile app preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">UX/UI · 2023</span>
+                    <h3>Timerfood</h3>
+                    <p>Mobile app for food planning.</p>
+                    <a class="project-link" href="Case-Study-Timerfood.html">View project <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="dev">
+                  <div class="project-media gradient-violet">
+                    <img src="img/screen-2-01_dev.png" alt="Web Design project preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Development · 2024</span>
+                    <h3>Web Design</h3>
+                    <p>Layout with HTML &amp; CSS.</p>
+                    <a class="project-link" href="Case-Study-Web-Design.html">View project <span class="project-badge">New</span></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="dev">
+                  <div class="project-media gradient-blue">
+                    <img src="img/screen-2-02_dev.png" alt="Weather App project preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Development · 2025</span>
+                    <h3>Weather App</h3>
+                    <p>Web app made with React.js.</p>
+                    <a class="project-link" href="Case-Study-Weather.html">View project <span class="project-badge">New</span></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="dev">
+                  <div class="project-media gradient-green">
+                    <img src="img/screen-2-03_dev.png" alt="Movie App project preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Development · 2024</span>
+                    <h3>Movie App</h3>
+                    <p>Web search app with React.js.</p>
+                    <a class="project-link" href="Case-App-Movies.html">View project <span class="project-badge">New</span></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="dev">
+                  <div class="project-media gradient-pink">
+                    <img src="img/screen-2-04_dev.png" alt="Shopping Cart project preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Development · 2024</span>
+                    <h3>Shopping Cart</h3>
+                    <p>Online store cart built in React.js.</p>
+                    <a class="project-link" href="Case-Study-Shopping-Cart.html">View project <span class="project-badge">New</span></a>
+                  </div>
+                </article>
+
+                <article class="project-card" data-category="dev">
+                  <div class="project-media gradient-warm">
+                    <img src="img/screen-2-05_dev.png" alt="Form Validation project preview">
+                  </div>
+                  <div class="project-content">
+                    <span class="project-type">Development · 2025</span>
+                    <h3>Form Validation</h3>
+                    <p>Using Vanilla JavaScript.</p>
+                    <a class="project-link" href="Case-Form-Validation.html">View project <span class="project-badge">New</span></a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next project">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <div class="carousel-dots" data-carousel-dots aria-label="Project carousel pagination"></div>
           </div>
         </div>
-      <!----works-->
-      <!--About-->
-      <div class="container-fluid white">
-        <div class="row">
-  <div class="col-sm-12" id="about">  
-      <div class="white text-secondary px-4 text-start">      
-          <div class="row">
-        
-            <div class="col-md-6 col-sm-12 pt-5 mt-5">
+      </section>
 
-              <div class="figura"><img src="img/smile-svgrepo-com.svg" ></a></div>
-              <div class="figura-2"></div>
-              <div class="figura-3"></div>
-              
+      <section class="about-section section-reveal" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-icon-card">
+              <img src="img/smile-svgrepo-com.svg" alt="">
             </div>
-            <div class="col-md-6 col-sm-12 py-5">
-              <h1 class="display-5 lh-1 mb-3 mt-0 text-dark">Me</h1>
-
-              <p class="lead fs-5 text-light">
-                <table>
-                  <tr>
-                    <td class="d-flex align-items-start;">
-                       
-                    </td>
-                    <td>
-                      <p class="lead fs-5 text-dark">I have lived in Buenos Aires since 2017 to develop my design career, focusing on enhancing my experience and skills.
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="d-flex align-items-start;">
-                      
-                    </td>
-                    <td>
-                      <p class="lead fs-5 text-dark">In my free time, I enjoy engaging in various activities such as drawing, watching movies, and playing video games. I've always had an affinity for graphics and interactive products. I also dedicate time to studying, reading educational materials, and personal development.
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="d-flex align-items-start;">
-                     
-                    </td>
-                    <td>
-                      <p class="lead fs-5 text-dark">Since 2010, I have been a graphic designer specializing in UX/UI design.
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="d-flex align-items-start;">
-                      
-                    </td>
-                    <td>
-                      <p class="lead fs-5 text-dark">I trained as a webmaster to understand the theoretical foundations of this design branch. Subsequently, I applied my skills to interaction dynamics and user experience, adhering to heuristic principles and usability standards.
-                         
-                      </p>
-                    </td>
-                  </tr>
-                </table>
-            </div>
-           
-          </div>
-         
           </div>
 
-       </div>
+          <div class="about-copy">
+            <p class="section-kicker">About</p>
+            <h2 id="about-title">Me</h2>
+            <p>I have lived in Buenos Aires since 2017 to develop my design career, focusing on enhancing my experience and skills.</p>
+            <p>In my free time, I enjoy drawing, watching movies and playing video games. I've always had an affinity for graphics and interactive products.</p>
+            <p>Since 2010, I have been a graphic designer specializing in UX/UI design.</p>
+            <p>I trained as a webmaster to understand the theoretical foundations of this design branch, applying interaction dynamics, user experience, heuristic principles and usability standards.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <p class="section-kicker mb-2">Contact</p>
+          <h2>Let’s build thoughtful digital experiences.</h2>
+        </div>
+        <div class="footer-actions" aria-label="Contact links">
+          <a class="social-link" href="https://www.linkedin.com/in/maryoris-martinez-9b9186134" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+          <a class="social-link" href="https://www.behance.net/MaryorisMartinez" aria-label="Behance profile"><i class="fab fa-behance"></i></a>
+          <a class="social-link" href="mailto:maryorism6@gmail.com" aria-label="Send email"><i class="far fa-envelope"></i></a>
+          <a class="back-top" href="#top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+        </div>
       </div>
-    </div>
-     
-       <!----Footer-->
-     <div class="col-sm-12 white">
-      <div class="container " id="contact">
-        <div class="row">
-          <div class="container">
-        <footer class="d-flex flex-sm-column flex-md-row flex-wrap justify-content-between align-items-center py-3 combo-footer">
-          
-          <div class=" col-md-9 d-flex align-items-center  justify-content-lg-start text-dark combo-icons">
-            <div class="lead fs-5 text-dark text-contact">Contact </div>
-      
-              <div class=" icon-bar">
-               
-                <a type="button" href="https://www.linkedin.com/in/maryoris-martinez-9b9186134"class="btn text-dark" aria-disabled="true">
-                     
-                  <i class="fab fa-linkedin"></i>
-                </a>
+    </footer>
 
-                <a type="button" href="https://www.behance.net/MaryorisMartinez" class="btn text-dark" aria-disabled="true">
-               
-                  <i class="fab fa-behance"></i>
-                </a>
-
-
-                        <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          <i class="far fa-envelope text-dark"></i>
-                        </a>
-                
-              </div>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body card-icons-footer">
-                 maryorism6@gmail.com
-              </div>
-            </div>
-
-            </div>
-            <div class=" col-sm-3">
-                <a href="#top" class="nav-link px-2 py-3 link-dark text-end arrow-bottom">
-                  <img src="img/up-arrow-svgrepo-com.svg" height="80" ></a>
-            </div>
-        </footer>
-          </div>
-        </div>
-        </div>
-        
-
-      </div>
-    <!---Footer end-->
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-   
-    <script type="module">
-  import { Toast } from 'bootstrap.esm.min.js'
-
-  Array.from(document.querySelectorAll('.toast'))
-    .forEach(toastNode => new Toast(toastNode))
-    </script>
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Activar pestaña basada en el hash de la URL al cargar
-            if (window.location.hash) {
-                const hash = window.location.hash;
-                const triggerEl = document.querySelector(`[data-bs-target="${hash}"]`);
-                if (triggerEl) {
-                    // Asegurarse de que Bootstrap reconozca el tab
-                    bootstrap.Tab.getInstance(triggerEl) || new bootstrap.Tab(triggerEl);
-                    triggerEl.click();
-                }
-            }
-            
-            // Actualizar URL con hash cuando se cambia de pestaña
-            const tabEls = document.querySelectorAll('button[data-bs-toggle="tab"]');
-            tabEls.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = tab.getAttribute('data-bs-target');
-                    // Usar replaceState para actualizar la URL sin agregar una nueva entrada al historial
-                    history.replaceState(null, null, target);
-                });
-            });
-            
-            // Manejar el evento popstate (cuando se navega con los botones adelante/atrás)
-            window.addEventListener('popstate', function(event) {
-                if (window.location.hash) {
-                    const hash = window.location.hash;
-                    const triggerEl = document.querySelector(`[data-bs-target="${hash}"]`);
-                    if (triggerEl) {
-                        bootstrap.Tab.getInstance(triggerEl) || new bootstrap.Tab(triggerEl);
-                        triggerEl.click();
-                    }
-                }
-            });
-        });
-    </script>
-    <script>
-        // Solución completa para mantener el estado de la pestaña activa
-        document.addEventListener('DOMContentLoaded', function() {
-            // Guardar la pestaña activa en sessionStorage cuando se cambia
-            const tabEls = document.querySelectorAll('[data-bs-toggle="tab"]');
-            tabEls.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const target = tab.getAttribute('data-bs-target');
-                    sessionStorage.setItem('activeTab', target);
-                });
-            });
-            
-            // Recuperar la pestaña activa al cargar la página
-            const activeTab = sessionStorage.getItem('activeTab');
-            if (activeTab) {
-                const tabTrigger = document.querySelector(`[data-bs-target="${activeTab}"]`);
-                if (tabTrigger) {
-                    new bootstrap.Tab(tabTrigger).show();
-                }
-            }
-            
-            // Manejar parámetros de URL para simular navegación entre páginas
-            const urlParams = new URLSearchParams(window.location.search);
-            const returnTab = urlParams.get('returnTab');
-            if (returnTab) {
-                const tabTrigger = document.querySelector(`[data-bs-target="${returnTab}"]`);
-                if (tabTrigger) {
-                    new bootstrap.Tab(tabTrigger).show();
-                    sessionStorage.setItem('activeTab', returnTab);
-                    
-                    // Limpiar el parámetro de la URL
-                    const newUrl = window.location.origin + window.location.pathname;
-                    window.history.replaceState({}, document.title, newUrl);
-                }
-            }
-        });
-        
-        // Función para simular el botón Atrás del navegador
-        function simulateBackButton() {
-            // Simular que venimos de la página de caso de estudio con el tab de desarrollo activo
-            window.location.href = 'index.html?returnTab=' + encodeURIComponent('#profile-tab-pane');
-        }
-    </script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/portfolio.js"></script>
   </body>
 </html>
