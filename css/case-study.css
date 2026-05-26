@@ -164,7 +164,7 @@ body.case-page {
 
 .case-action-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(135deg, var(--color-violet), var(--color-secondary));
   box-shadow: 0 16px 38px rgba(22, 143, 132, 0.24);
 }
 .case-action-primary:hover { color: #fff; box-shadow: 0 22px 44px rgba(22, 143, 132, 0.30); }
@@ -284,7 +284,7 @@ body.case-page {
   height: 0.28rem;
   margin-bottom: 0.85rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(135deg, var(--color-violet), var(--color-secondary));
 }
 
 .case-study-content .text-center h1.featurette-heading::before,
