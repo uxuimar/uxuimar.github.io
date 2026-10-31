@@ -129,7 +129,7 @@ body.case-page {
   margin: 0.75rem 0 1.15rem;
   color: var(--color-ink);
   font-size: clamp(2rem, 5.4vw, 4rem);
-  font-weight: 950;
+  font-weight: 600;
   letter-spacing: -0.065em;
   line-height: 0.92;
 }
@@ -243,7 +243,7 @@ body.case-page {
 .case-study-content h2.featurette-heading,
 .case-study-content .display-5 {
   color: var(--color-ink) !important;
-  font-weight: 950 !important;
+  font-weight: 600 !important;
   letter-spacing: -0.045em;
   line-height: 0.96;
   margin-bottom: clamp(1rem, 2vw, 1.35rem) !important;
@@ -1085,7 +1085,7 @@ body.case-page {
 .new-ux-page .ux-section-heading {
   color: var(--color-ink, #282238);
   font-size: clamp(2rem, 4.5vw, 3.35rem);
-  font-weight: 900;
+ 
   line-height: 1.08;
   letter-spacing: -.045em;
   margin: .45rem 0 1.2rem;
@@ -2007,7 +2007,7 @@ body.case-page {
 }
 .case-page .case-final-title {
   color: var(--color-ink) !important;
-  font-weight: 900;
+  font-weight: 600;
   font-size: clamp(2.25rem, 5.5vw, 3rem);
   letter-spacing: -.055em;
   line-height: 1.09;
