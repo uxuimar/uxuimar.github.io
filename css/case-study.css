@@ -250,7 +250,7 @@ body.case-page {
 }
 
 .case-study-content .featurette-heading {
-  font-size: clamp(2.05rem, 4.6vw, 4rem);
+  font-size: clamp(2.05rem, 4.6vw, 3rem);
 }
 
 .case-study-content .display-5 {
@@ -608,7 +608,7 @@ body.case-page {
   column-gap: clamp(0.95rem, 2vw, 1.25rem);
   margin: 0 !important;
   color: var(--color-ink);
-  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  font-size: clamp(1.55rem, 3vw, 1.5rem);
   font-weight: 950;
   letter-spacing: -0.045em;
   line-height: 0.98;
@@ -634,7 +634,7 @@ body.case-page {
 .case-study-content .card:has(.img-cards) .card-header p {
   width: fit-content !important;
   max-width: 100% !important;
-  margin: 0 0 0 calc(var(--persona-photo-size) + clamp(0.95rem, 2vw, 1.25rem)) !important;
+
   padding: 0.45rem 0.72rem !important;
   border: 1px solid rgba(22, 143, 132, 0.12);
   border-radius: 999px !important;
@@ -1248,7 +1248,6 @@ body.case-page {
   padding: clamp(1.15rem, 2.7vw, 1.7rem);
   background: #fff;
   border: 1px solid rgba(116,76,176,.18);
-  border-left: 5px solid var(--cascade-accent);
   border-radius: 26px;
   box-shadow: 0 18px 46px rgba(44,23,74,.08);
 }
@@ -1590,8 +1589,8 @@ body.case-page {
     margin-bottom: 0 !important;
     min-width: 0;
   }
-  .case-page:not(.new-ux-page) .case-study-content > div .lead.px-5,
-  .case-page:not(.new-ux-page) .case-study-content > div .lead.mx-5,
+  .case-page:not(.new-ux-page) .case-study-content > div .lead.px-5:not(li),
+  .case-page:not(.new-ux-page) .case-study-content > div .lead.mx-5:not(li),
   .case-page:not(.new-ux-page) .case-study-content > div .text-secondary.px-4,
   .case-page:not(.new-ux-page) .case-study-content > div .text-secondary.px-5 {
     padding-left: 0 !important;
@@ -1642,4 +1641,533 @@ body.case-page {
 @media (prefers-reduced-motion: reduce) {
   .case-page .case-gallery-track { scroll-behavior: auto; }
   .case-page .case-gallery-arrow { transition: none; }
+}
+
+/* ========================================================================
+   QA MOBILE — 2026-10-31
+   Scope: inherited case-study pages only. Keep Value Delivery's specific UI.
+   Source of truth for spacing, bullet alignment, visual documents and outro.
+   ======================================================================== */
+
+/* Text must remain readable on white and pale-tint backgrounds. */
+.case-page:not(.new-ux-page) .case-study-content .lead,
+.case-page:not(.new-ux-page) .case-study-content .lead p,
+.case-page:not(.new-ux-page) .case-study-content .card-text,
+.case-page:not(.new-ux-page) .case-study-content .text-secondary:not(.featurette-heading),
+.case-page:not(.new-ux-page) .case-study-content .case-gallery-hint {
+  color: #514a61 !important;
+}
+
+/* One consistent bullet pattern: bullet takes actual space in the flex row.
+   Avoid absolute positioning, which overlapped text on narrow viewports.
+   Complex items containing images retain their own legacy layout. */
+.case-page:not(.new-ux-page) .case-study-content .list-group-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 0.85rem 1rem !important;
+  color: #514a61 !important;
+  line-height: 1.6;
+}
+.case-page:not(.new-ux-page) .case-study-content .list-group-item::before {
+  position: static !important;
+  display: block;
+  flex: 0 0 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.61em 0 0;
+  inset: auto !important;
+  border-radius: 50%;
+  background: #31cdbf;
+  box-shadow: 0 0 0 3px rgba(49, 205, 191, 0.13);
+}
+
+/* Keep the regular vertical rhythm instead of stacked legacy utility gaps. */
+.case-page:not(.new-ux-page) .case-study-content > div {
+  --section-y: clamp(2.9rem, 5.2vw, 4.5rem);
+}
+.case-page:not(.new-ux-page) .case-study-content > div > .container,
+.case-page:not(.new-ux-page) .case-study-content > div > .container-fluid {
+  padding-block: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-study-content .row:empty,
+.case-page:not(.new-ux-page) .case-study-content [class*="col-"]:empty {
+  display: none !important;
+}
+
+/* Visual documents should be legible, and never dictate disproportionate row height. */
+.case-page:not(.new-ux-page) .case-study-content img[src*="Userflow"],
+.case-page:not(.new-ux-page) .case-study-content img[src*="UserFlow"] {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain;
+}
+.case-page:not(.new-ux-page) .case-study-content .row:has(.img-cards) .card.white.p-0 img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: 660px;
+  object-fit: contain;
+}
+
+/* Outro: keep accent rule, heading and navigation on the same left edge. */
+.case-page:not(.new-ux-page) .case-study-content > div.case-thanks-section {
+  --section-y: clamp(2.25rem, 4vw, 3.25rem);
+  padding-bottom: 1rem !important;
+}
+.case-page:not(.new-ux-page) .case-thanks-section .text-center,
+.case-page:not(.new-ux-page) .case-thanks-section .featurette-heading {
+  text-align: left !important;
+}
+.case-page:not(.new-ux-page) .case-thanks-section h1.featurette-heading {
+  max-width: 100%;
+  margin: 0 !important;
+  font-size: clamp(2rem, 5.2vw, 3.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.case-page:not(.new-ux-page) .case-thanks-section h1.featurette-heading::before {
+  margin-inline: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-project-navigation.container {
+  justify-content: flex-start !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: clamp(2.5rem, 5vw, 3.75rem) !important;
+  margin-inline: auto;
+}
+
+/* Header uses the same two-role brand as the homepage, even on 320px phones. */
+.case-page .portfolio-navbar .brand-role {
+  line-height: 1.3;
+}
+
+@media (max-width: 767.98px) {
+  .case-page:not(.new-ux-page) .case-study-content > div {
+    --section-y: clamp(2rem, 6.5vw, 2.65rem);
+  }
+  .case-page:not(.new-ux-page) .case-study-content > div > .container,
+  .case-page:not(.new-ux-page) .case-study-content > div > .container-fluid {
+    padding-inline: clamp(1rem, 5vw, 1.35rem) !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .featurette,
+  .case-page:not(.new-ux-page) .case-study-content .row {
+    row-gap: clamp(1rem, 4.2vw, 1.5rem);
+  }
+  .case-page:not(.new-ux-page) .case-study-content .featurette-heading,
+  .case-page:not(.new-ux-page) .case-study-content .display-5,
+  .case-page:not(.new-ux-page) .case-study-content .text-center .featurette-heading {
+    text-align: left !important;
+    margin-bottom: 0.8rem !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .text-center .featurette-heading::before {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .featurette-heading {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    line-height: 1.12;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .lead {
+    font-size: 1rem !important;
+    line-height: 1.6;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .list-group {
+    gap: 0.65rem;
+    margin-block: 0.8rem 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .list-group-item {
+    margin: 0 !important;
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.7rem;
+    font-size: 0.98rem !important;
+    line-height: 1.55;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .list-group-item::before {
+    flex-basis: 0.48rem;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-top: 0.61em;
+  }
+  /* Archetype + empathy map must be successive blocks, not columns with
+     inherited offsets / heights that create large gaps between people. */
+  .case-page:not(.new-ux-page) .case-study-content .d-flex.flex-column.flex-sm-row:has(.img-cards) {
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 1.1rem;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .d-flex.flex-column.flex-sm-row:has(.img-cards) > [class*="col-"] {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .card:has(.img-cards) {
+    height: auto !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content .row:has(.img-cards) .card.white.p-0 img {
+    max-height: 420px;
+  }
+  /* Remove redundant parent spacing but retain readable paragraph rhythm. */
+  .case-page:not(.new-ux-page) .case-study-content .featurette > [class*="col-"] .lead.px-5:not(li),
+  .case-page:not(.new-ux-page) .case-study-content .featurette > [class*="col-"] .lead.mx-5:not(li) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-study-content img[src*="sketch"],
+  .case-page:not(.new-ux-page) .case-study-content img[src*="Sketch"] {
+    max-height: 480px;
+    object-fit: contain;
+  }
+  .case-page:not(.new-ux-page) .case-study-content > div.case-thanks-section {
+    --section-y: 2.25rem;
+    padding-bottom: 0.5rem !important;
+  }
+  .case-page:not(.new-ux-page) .case-thanks-section h1.featurette-heading {
+    font-size: clamp(1.9rem, 7.3vw, 2.65rem) !important;
+    line-height: 1.13 !important;
+    margin: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-project-navigation.container {
+    padding-inline: clamp(1rem, 5vw, 1.35rem) !important;
+    padding-block: 0.5rem 2.5rem !important;
+  }
+  .case-page .portfolio-navbar .brand-role {
+    font-size: clamp(0.6rem, 2.7vw, 0.72rem);
+    letter-spacing: 0.10em;
+  }
+}
+
+/* The closing CTA is now in the heading column, so it shares its x-position. */
+.case-page:not(.new-ux-page) .case-thanks-section .case-project-navigation {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(1.1rem, 2.8vw, 1.8rem) 0 0 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+.case-page:not(.new-ux-page) .case-thanks-section .case-project-navigation .case-back-link {
+  margin: 0 !important;
+}
+@media (max-width: 767.98px) {
+  .case-page:not(.new-ux-page) .case-thanks-section .case-project-navigation {
+    padding-top: 1.15rem !important;
+  }
+}
+
+/* ========================================================================
+   QA TEMPLATE REPAIR / 2026-10-31
+   Normalized DOM sections in AllCommunity + Timerfood; canonical outro and
+   UI Kit reading order across legacy pages. No new stylesheets or libraries.
+   ======================================================================== */
+
+/* The case sections are siblings in the actual templates. A single outer
+   wrapper must never swallow following sections or create a huge white zone. */
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section {
+  --section-y: clamp(2.8rem, 5vw, 4.2rem);
+  padding-block: var(--section-y) !important;
+  margin: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section + .case-legacy-section,
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section + .case-final-section {
+  border-top: 1px solid rgba(22,143,132,.07);
+}
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section.bg-light {
+  background: #f5faf9 !important;
+}
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section.white,
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section.whitet {
+  background: #fff !important;
+}
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section > .container,
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section > .container-fluid {
+  max-width: 1120px;
+  margin-inline: auto !important;
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section .row:empty,
+.case-page:not(.new-ux-page) .case-study-content > .case-legacy-section [class*="col-"]:empty {
+  display: none !important;
+}
+
+/* Card-style bullets: one shared treatment for normal text lists only.
+   A stable left gutter prevents bullet collision with any number of lines.
+   Avoid applying this to UN Sustainable Development Goal image/list cards. */
+.case-page:not(.new-ux-page) .case-legacy-section ul.list-group,
+.case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul {
+  display: grid;
+  gap: .75rem !important;
+  padding: 0 !important;
+  margin: 1.1rem 0 0 !important;
+  list-style: none;
+  min-width: 0;
+}
+.case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:not(:has(img)),
+.case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:not(:has(img)) {
+  display: block !important;
+  position: relative !important;
+  min-height: 3.3rem !important;
+  box-sizing: border-box;
+  padding: .9rem 1rem .9rem 2.75rem !important;
+  margin: 0 !important;
+  color: #514a61 !important;
+  background: #fff !important;
+  border: 1px solid rgba(22,143,132,.13) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 28px rgba(32,16,55,.045);
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.57 !important;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:not(:has(img))::before,
+.case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:not(:has(img))::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 1.13rem !important;
+  top: 1.39rem !important;
+  display: block !important;
+  flex: initial !important;
+  width: .5rem !important;
+  height: .5rem !important;
+  margin: 0 !important;
+  background: #39cfc2 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 4px rgba(57,207,194,.13);
+}
+.case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:has(img),
+.case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:has(img) {
+  display: flex !important;
+  gap: .95rem;
+  align-items: flex-start;
+  min-height: auto !important;
+  padding: 1rem !important;
+}
+.case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:has(img)::before,
+.case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:has(img)::before { content: none !important; }
+
+/* UI Kit: title/description FIRST in source, visual AFTER; clear spacing. */
+.case-page:not(.new-ux-page) .case-ui-kit-row {
+  display: flex;
+  align-items: center !important;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  margin: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-ui-kit-row > .case-ui-kit-copy,
+.case-page:not(.new-ux-page) .case-ui-kit-row > .case-ui-kit-visual {
+  flex: 1 1 0;
+  max-width: 100%;
+  min-width: 0;
+  width: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.case-page:not(.new-ux-page) .case-ui-kit-row .case-ui-kit-visual img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 540px;
+  object-fit: contain;
+}
+
+/* One shared close for AllCommunity / Timerfood / Confidential etc.
+   Same left edge for gradient, heading and CTA; purposeful bottom breathing. */
+.case-page .case-final-section {
+  background: #fff;
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(3.25rem, 7vw, 5.5rem);
+  border-top: 1px solid rgba(22,143,132,.08);
+}
+.case-page .case-final-section .container {
+  max-width: 1120px;
+  margin-inline: auto !important;
+}
+.case-page .case-final-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.case-page .case-final-accent {
+  display: block;
+  width: 3.1rem;
+  height: .3rem;
+  margin-bottom: 1.05rem;
+  border-radius: 50px;
+  background: linear-gradient(105deg,#a84de8,#63e2d3);
+}
+.case-page .case-final-title {
+  color: var(--color-ink) !important;
+  font-weight: 900;
+  font-size: clamp(2.25rem, 5.5vw, 3rem);
+  letter-spacing: -.055em;
+  line-height: 1.09;
+  max-width: 18ch;
+  text-align: left !important;
+  margin: 0 !important;
+}
+.case-page .case-final-section .case-project-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 2rem 0 0 !important;
+  padding: 0 !important;
+  width: auto;
+}
+.case-page .case-final-cta {
+  display: inline-flex;
+  gap: .7rem;
+  align-items: center;
+  margin: 0 !important;
+  text-decoration: none;
+}
+
+/* Legacy persona rows have old Bootstrap mx-3 on the adjacent empathy map;
+   keep a common reading width without giant blank columns. */
+.case-page:not(.new-ux-page) .case-legacy-section .row:has(.img-cards) > [class*="col-"] {
+  min-width: 0;
+}
+.case-page:not(.new-ux-page) .case-legacy-section .row:has(.img-cards) > [class*="col-"] .card.white.p-0 img {
+  max-height: 560px;
+  object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+  .case-page:not(.new-ux-page) .case-study-content > .case-legacy-section {
+    --section-y: clamp(2.5rem, 7.5vw, 3rem);
+  }
+  .case-page:not(.new-ux-page) .case-study-content > .case-legacy-section > .container,
+  .case-page:not(.new-ux-page) .case-study-content > .case-legacy-section > .container-fluid {
+    padding-inline: 1.2rem !important;
+  }
+  .case-page:not(.new-ux-page) .case-ui-kit-row {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 1.6rem;
+  }
+  .case-page:not(.new-ux-page) .case-ui-kit-row > .case-ui-kit-copy,
+  .case-page:not(.new-ux-page) .case-ui-kit-row > .case-ui-kit-visual {
+    width: 100% !important;
+    flex: 0 0 auto;
+  }
+  .case-page:not(.new-ux-page) .case-ui-kit-row .case-ui-kit-visual img {
+    max-height: none;
+  }
+  .case-page:not(.new-ux-page) .case-legacy-section ul.list-group,
+  .case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul { gap: .72rem !important; }
+  .case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:not(:has(img)),
+  .case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:not(:has(img)) {
+    padding: .9rem 1rem .9rem 2.55rem !important;
+    min-height: 3.5rem !important;
+    line-height: 1.55 !important;
+  }
+  .case-page:not(.new-ux-page) .case-legacy-section ul.list-group > li.list-group-item:not(:has(img))::before,
+  .case-page:not(.new-ux-page) .case-legacy-section ul.fa-ul > li.list-group-item:not(:has(img))::before {
+    left: 1rem !important;
+    top: 1.43rem !important;
+  }
+  /* Remove inherited extra heights, offsets and row utility padding on mobile. */
+  .case-page:not(.new-ux-page) .case-legacy-section .row:has(.img-cards) > [class*="col-"] {
+    width: 100% !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-legacy-section .row:has(.img-cards) .card[style*="min-height"] {
+    min-height: 0 !important;
+  }
+  .case-page:not(.new-ux-page) .case-legacy-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  .case-page .case-final-section {
+    padding: 3rem 0 4.25rem;
+  }
+  .case-page .case-final-section .container {
+    padding-inline: 1.2rem !important;
+  }
+  .case-page .case-final-title {
+    font-size: clamp(2.2rem, 8vw, 2.9rem);
+    max-width: 13ch;
+  }
+  .case-page .case-final-section .case-project-navigation {
+    margin-top: 2rem !important;
+  }
+  /* Timerfood: ending the User testing section once the table is complete,
+     rather than inheriting another section's padding. */
+  .case-page:not(.new-ux-page) .case-legacy-section:has(.case-testing-table-wrapper) {
+    padding-bottom: 2.6rem !important;
+  }
+}
+
+/* Defensive row containment: Bootstrap's negative row gutters on nested legacy
+   templates caused ~17px horizontal overflow on narrow Android screens. */
+.case-page:not(.new-ux-page) .case-legacy-section .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100%;
+}
+.case-page:not(.new-ux-page) .case-legacy-section .row > [class*="col-"] {
+  min-width: 0;
+}
+
+/* ========================================================================
+   BULLET CARD FIX — 2026-10-31
+   Single rendering rule across every legacy case-study page.
+   Previous pseudoelements competed between flex and absolute positioning;
+   a background marker cannot overlap a text line or affect item height.
+   ======================================================================== */
+body.case-page:not(.new-ux-page) .case-study-content ul.list-group > li.list-group-item:not(:has(img)),
+body.case-page:not(.new-ux-page) .case-study-content ul.fa-ul > li.list-group-item:not(:has(img)) {
+  display: block !important;
+  box-sizing: border-box;
+  position: relative !important;
+  width: 100%;
+  min-height: 3.55rem !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0.9rem 1rem 0.9rem 2.9rem !important;
+  border: 1px solid rgba(22, 143, 132, 0.13) !important;
+  border-radius: 18px !important;
+  background: radial-gradient(circle at 1.25rem 1.55rem,
+      #39cfc2 0 0.245rem,
+      rgba(57, 207, 194, 0.14) 0.26rem 0.47rem,
+      transparent 0.49rem), #fff !important;
+  color: #514a61 !important;
+  line-height: 1.6 !important;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  box-shadow: 0 10px 28px rgba(32, 16, 55, 0.045);
+}
+/* Disable old decorative dots. The card background owns the only marker. */
+body.case-page:not(.new-ux-page) .case-study-content ul.list-group > li.list-group-item:not(:has(img))::before,
+body.case-page:not(.new-ux-page) .case-study-content ul.fa-ul > li.list-group-item:not(:has(img))::before {
+  content: none !important;
+  display: none !important;
+}
+/* Image-led items (e.g. SDG cards) should not gain an artificial bullet. */
+body.case-page:not(.new-ux-page) .case-study-content ul.list-group > li.list-group-item:has(img)::before,
+body.case-page:not(.new-ux-page) .case-study-content ul.fa-ul > li.list-group-item:has(img)::before {
+  content: none !important;
+  display: none !important;
+}
+@media (max-width: 767.98px) {
+  body.case-page:not(.new-ux-page) .case-study-content ul.list-group > li.list-group-item:not(:has(img)),
+  body.case-page:not(.new-ux-page) .case-study-content ul.fa-ul > li.list-group-item:not(:has(img)) {
+    min-height: 3.55rem !important;
+    padding: 0.88rem 0.95rem 0.88rem 2.75rem !important;
+    background: radial-gradient(circle at 1.14rem 1.5rem,
+        #39cfc2 0 0.245rem,
+        rgba(57, 207, 194, 0.14) 0.26rem 0.47rem,
+        transparent 0.49rem), #fff !important;
+  }
+
 }

@@ -6,11 +6,70 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = main?.querySelector(".case-study-content");
   if (!document.body.classList.contains("case-page") || !content) return;
 
+
+  // Canonical brand: match the index heading on every case-study page.
+  // Old case HTML used only "UX/UI Designer"; update it without touching content.
+  const brandRole = document.querySelector(".portfolio-navbar .brand-role");
+  if (brandRole) brandRole.textContent = "UX/UI Designer / Developer";
+
+  // Older development case pages still have a nested legacy thank-you block.
+  // Normalize them at runtime until their HTML templates are migrated.
+  // New/updated templates already include .case-final-section, so untouched.
+  if (!content.querySelector(".case-final-section") &&
+      !document.body.classList.contains("new-ux-page")) {
+    const oldTitle = Array.from(content.querySelectorAll("h1, h2"))
+      .find((heading) => /thanks for watching!?/i.test(heading.textContent.trim()));
+    if (oldTitle) {
+      let legacyWrapper = oldTitle;
+      while (legacyWrapper.parentElement && legacyWrapper.parentElement !== content) {
+        legacyWrapper = legacyWrapper.parentElement;
+      }
+      if (legacyWrapper.parentElement === content) {
+        const outro = document.createElement("section");
+        outro.className = "case-final-section";
+        outro.setAttribute("aria-label", "End of case study");
+        outro.innerHTML = '<div class="container"><div class="case-final-inner">' +
+          '<span class="case-final-accent" aria-hidden="true"></span>' +
+          '<h2 class="case-final-title">Thanks for watching!</h2>' +
+          '<nav class="case-project-navigation" aria-label="Project navigation">' +
+          '<a class="case-back-link case-final-cta" href="index.html#works">' +
+          '<i class="bi bi-arrow-left" aria-hidden="true"></i> Back to all projects</a>' +
+          '</nav></div></div>';
+        legacyWrapper.replaceWith(outro);
+      }
+    }
+  }
+
+  // All other legacy templates can share the card/list rhythm even before
+  // their individual HTML structure is modernized.
+  if (!document.body.classList.contains("new-ux-page")) {
+    Array.from(content.children).forEach((child) => {
+      if (child.tagName === "DIV") child.classList.add("case-legacy-section");
+    });
+  }
+
+  // Mark the actual closing block, even where inherited markup contains nested
+  // Bootstrap wrappers. This also makes the heading and CTA align consistently.
+  let closingHeading = null;
+  if (!document.body.classList.contains("new-ux-page")) {
+    const thanksHeading = Array.from(content.querySelectorAll("h1, h2"))
+      .find((heading) => /thanks for watching!?/i.test(heading.textContent.trim()));
+    if (thanksHeading) {
+      closingHeading = thanksHeading;
+      thanksHeading.textContent = "Thanks for watching!";
+      let block = thanksHeading;
+      while (block.parentElement && block.parentElement !== content) {
+        block = block.parentElement;
+      }
+      if (block.parentElement === content) block.classList.add("case-thanks-section");
+    }
+  }
+
   // A common exit action for the original UX/UI and development projects.
   // Value Delivery already contains its own bottom CTA.
   if (!main.querySelector(".ux-bottom-link, .case-project-navigation")) {
     const nav = document.createElement("nav");
-    nav.className = "case-project-navigation container d-flex justify-content-center";
+    nav.className = "case-project-navigation d-flex justify-content-start";
     nav.setAttribute("aria-label", "Project navigation");
     const link = document.createElement("a");
     link.className = "case-back-link mb-0";
@@ -21,7 +80,28 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.setAttribute("aria-hidden", "true");
     link.append(icon, document.createTextNode("Back to all projects"));
     nav.append(link);
-    content.insertAdjacentElement("afterend", nav);
+    if (closingHeading) {
+      // Put the CTA alongside the heading, in the same column. This guarantees
+      // exact left alignment across Android, tablet and desktop breakpoints.
+      closingHeading.parentElement.append(nav);
+    } else {
+      nav.classList.add("container");
+      content.insertAdjacentElement("afterend", nav);
+    }
+  }
+
+  // Return to the very project card that opened this case study.
+  // This also works for direct links and file:// previews: the project filename
+  // identifies the matching UX or Development card on the index.
+  const caseFilename = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+  if (caseFilename) {
+    const returnUrl = new URL("index.html", document.baseURI);
+    returnUrl.searchParams.set("project", caseFilename);
+    returnUrl.hash = "works";
+    const target = `index.html${returnUrl.search}${returnUrl.hash}`;
+    document.querySelectorAll('a[href="index.html#works"]').forEach((link) => {
+      link.setAttribute("href", target);
+    });
   }
 
   /** Convert *only* the Prototype image grids into an accessible, swipeable gallery.
